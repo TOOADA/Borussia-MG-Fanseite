@@ -18,3 +18,10 @@
 - Erfahrung in einer Zusammenarbeit sammeln
 - Inspiration und Ideen sammeln
 
+
+
+```bash
+npm install
+npm run dev -- --open
+```
+
