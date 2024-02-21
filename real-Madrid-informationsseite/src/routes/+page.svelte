@@ -1,14 +1,41 @@
-<head>
+<script>
+	import Button from './Button.svelte'
+</script>
+
+<svelte:head>
     <title>Hauptseite</title>
-</head>
+</svelte:head>
 
 <style>
+    @import './css/themeswitch.css';
+
+	:global(body) {
+        background-color: white;
+		color: black;
+		transition: background-color 0.5s
+	}
+	:global(body.dark-mode) {
+		background-color: rgb(34, 36, 36);
+		color: white;
+	}
+
+    form {
+		align-content: center;
+	}
+
     h1 {
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
     }
 
+    .footer {
+    
+    position: absolute;
+    bottom: 0;
+  }
+
     .flex-container {
+      flex-direction: row;
       display: flex;
       flex-wrap: nowrap;
       background-color: transparent;
@@ -38,6 +65,10 @@
 <body>
 <h1>Real Madrid - Projektarbeit</h1>
 
+<Button>
+	Themeswitch
+</Button>
+<div class="footer">
     <div class="flex-container">
         <div>
             <p>
@@ -52,4 +83,5 @@
             <a href="https://github.com/TOOADA"><img src="https://avatars.githubusercontent.com/u/128263730?v=4" alt="Noah's Github Profilbild"/></a>
         </div>
     </div>
+</div>
 </body>

@@ -1,0 +1,57 @@
+<script>
+    function toggle() {
+        window.document.body.classList.toggle('dark-mode')
+    }
+</script>
+
+<button on:click={toggle}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+       <path data-name="layer2"
+              d="M36.4 20.4a16 16 0 1 0 16 16 16 16 0 0 0-16-16zm0 28a12 12 0 0 1-10.3-5.8l2.5.3A13.7 13.7 0 0 0 42 25.8a12 12 0 0 1-5.6 22.6z"
+              ></path>
+        <path data-name="layer1" d="M36.4 16.4a2 2 0 0 0 2-2v-8a2 2 0 1 0-4 0v8a2 2 0 0 0 2 2zm-20 20a2 2 0 0 0-2-2h-8a2 2 0 0 0 0 4h8a2 2 0 0 0 2-2zm3-14.1a2 2 0 0 0 2.8-2.8l-5.7-5.7a2 2 0 0 0-2.8 2.8zM59 13.8a2 2 0 0 0-2.8 0l-5.7 5.7a2 2 0 1 0 2.8 2.8l5.7-5.7a2 2 0 0 0 0-2.8zM19.4 50.5l-5.7 5.7a2 2 0 1 0 2.9 2.8l5.7-5.7a2 2 0 1 0-2.8-2.8z"
+              ></path>
+    </svg>
+    <slot/>
+</button>
+
+<style>
+
+    button:hover {
+        transition-duration: 0.3s;
+        opacity: 100%;
+    }
+    button {
+        background-color: rgb(51, 56, 56);
+        box-shadow: rgba(0, 0, 0, 1) 3px 4px;
+        color: white;
+        border: none;
+        opacity: 80%;
+        border-radius: 8px;
+        padding: 0.6rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 1%;
+    }
+    :global(body.dark-mode) button {
+        background-color: red;
+        color: black;
+    }
+
+    button svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.2rem;
+    }
+
+    button svg path{
+        fill: white;
+    }
+
+    :global(body.dark-mode) button svg path {
+        transition: 0.5s;
+        fill: black;
+    }
+
+</style>
