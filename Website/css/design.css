@@ -4,11 +4,11 @@ h1{
 }
 
 h2{
-  text-decoration: underline #63C149 wavy 3px;
+  text-decoration: underline #63C149 wavy 2px;
 }
 
 h3{
-  text-decoration: underline #63C149 dashed 2px;
+  text-decoration: underline #63C149 dashed 3px;
 }
 
 p{
@@ -21,12 +21,12 @@ body
     color: white;
     text-align: center;
     background-color: rgb(31, 31, 31);
+    z-index: 0;
 }
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: #2b2b2b;
   filter: drop-shadow(7.5px 7.5px 3px hsla(0, 0%, 0%, 0.1));
   border-radius: 10px;
@@ -36,7 +36,6 @@ ul {
 
 li {
   margin-inline: 10px;
-  align-items: left;
 }
 
 li:last-child {
@@ -80,6 +79,65 @@ li img {
   /* firefox code */
 }
 
+
+.flex-container-large-content {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: transparent;
+  justify-content: center;
+}
+
+.flex-container-large-content > div {
+  filter: drop-shadow(7.5px 7.5px 3px hsla(0, 0%, 0%, 0.1));
+  background-color: #2b2b2b;
+  width: 500px;
+  margin: 10px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.flex-container-large-content p {
+  color: white;
+}
+
+.flex-container-large-content img {
+  width: 80%;
+  margin-bottom: 8%;
+  border-radius: 10px;
+}
+
+.flex-container-medium-content {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: transparent;
+  justify-content: center;
+}
+
+.flex-container-medium-content > div {
+  outline: 3px dashed #ffffff28;
+  filter: drop-shadow(7.5px 7.5px 3px hsla(0, 0%, 0%, 0.15));
+  background-color: #2b2b2b;
+  width: 250px;
+  margin: 10px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.flex-container-medium-content p {
+  color: white;
+}
+
+.flex-container-medium-content img {
+  width: 80%;
+  margin-bottom: 8%;
+  border-radius: 10px;
+}
+
+
 .flex-container-small-content {
   flex-direction: row;
   display: flex;
@@ -107,7 +165,6 @@ li img {
   border-radius: 10px;
 }
 
-
 .flex-container-general-content {
   flex-direction: row;
   display: flex;
@@ -133,3 +190,55 @@ li img {
   margin-bottom: 8%;
   border-radius: 10px;
 }
+
+.container-general-content {
+  min-width: 1080px; 
+  display: grid;
+  flex-wrap: nowrap;
+  background-color: transparent;
+  justify-content: center;
+}
+
+.container-general-content > div {
+  align-items: center;
+
+  text-align: center;
+  background-color: #313131;
+  border-radius: 10px;
+  margin: 5px;
+
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+} 

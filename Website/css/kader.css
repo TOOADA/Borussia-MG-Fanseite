@@ -1,7 +1,7 @@
 .lineup {
     width: 800px;
     height: 600px;
-    background-image: url("https://img.freepik.com/free-vector/soccer-green-field_225004-1137.jpg?w=826&t=st=1708825284~exp=1708825884~hmac=b058725d2f653b8b0a025f5183534aa56ccf141d1f84f0b1fb772deb967b4747");
+    background-image: image("");
     background-size: cover;
   }
   
@@ -72,4 +72,8 @@
     position: absolute;
   }
   
-  
+  .big_text{
+    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
+  }
