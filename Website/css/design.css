@@ -1,84 +1,89 @@
+/* font-size macht die größe vom der überschrift (h1) und text unterstreichung  is das andere */
 h1{
     font-size: 350%;
     text-decoration: underline #63C149 6px;
 }
-
+/* die untersreichung is wellig*/
 h2{
   text-decoration: underline #63C149 wavy 2px;
 }
-
+/* die untersreichung is gestrichelt*/
 h3{
   text-decoration: underline #63C149 dashed 3px;
 }
-
+/* Nimmt Roboto als Font und sonst Noto Color Emoji */
 p{
-  font-family: "bmg-font-std", Tahoma, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Roboto", sans-serif, "Noto Color Emoji", sans-serif;
 }
 
 body
 {
-  font-family: "Bungee", sans-serif;
-    color: white;
-    text-align: center;
-    background-color: rgb(31, 31, 31);
-    z-index: 0;
+    font-family: "Bungee", sans-serif; /* Nutzt die in HTML importierte Bungee Schrift als sans-serif Format */
+    color: white; /* schrift im body immer weiß */
+    text-align: center; /* Setzt den Text in die Mitte der Seite */
+    background-color: #1f1f1f; /* hintergrundfabe schwartz */
 }
+
+/* Navbar */
+
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #2b2b2b;
-  filter: drop-shadow(7.5px 7.5px 3px hsla(0, 0%, 0%, 0.1));
-  border-radius: 10px;
-  display: inline-flex;
-  align-items: center;
+  list-style-type: none; /* Setzt die Vorzeichen der liste auf "none" (nichts) und löscht sie damit */
+  margin: 0;  /* formatiert die Navbar und setzt den Abstand auf 0 */
+  padding: 0; /* ähnlich zu margin ⬆ */
+  background-color: #2b2b2b; /* Setzt die Hintergrund Farbe auf ein abhebendes Schwarz (#2b2b2b) als HEX wert, das sich unterscheidet vom Hintergrund des Body's (#1f1f1f) als HEX wert */
+  filter: drop-shadow(7.5px 7.5px 3px hsla(0, 0%, 0%, 0.1)); /* Fügt einen Schatten der Navbar hinzu */
+  border-radius: 10px; /* Rundung der Ecken */
+  display: inline-flex; /* ein Atribut, welches die Navbar cropt und in sich flexibel macht */
+  align-items: center; /* Zentriert die Items */
 }
 
 li {
-  margin-inline: 10px;
-}
-
-li:last-child {
-  border-right: none;
+  margin-inline: 10px; /* Abstand in der Navbar zwichen den Einzelnen Elementen (inline) */
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: transform 0.25s;
-  border-radius: 10px;
+  display: block; /* lässt die Elemente in einem Block anzeigen (wird so formatiert) */
+  color: white; /* Jede Schrift im a element der Liste von der Navbar ist weiß */
+  text-align: center; /* Zentriert den Text im vorgesehenen Block */
+  padding: 14px 16px; /* Abstand in Höhe und Breite*/ 
+  text-decoration: none; /* Keine Text Deko (Nicht unterstrichen oder unterkringelt oder so) */
+  transition: transform 0.25s; /* Um den übergang zu verschönern und eine Einheitliche animation zu bieten mit transform */
+  border-radius: 10px; /* Gerundete Ecken */
 }
 
 li a:hover:not(.active) {
-  background-color: rgb(31, 31, 31);
-  font-weight: bold;
-  transform: scale(1.08);
+  background-color: rgb(31, 31, 31); /* Farbe hinter dem Logo beim Hovern */
+  font-weight: bold; /* Macht wenn Schrift vorhanden und bold ging bold beim Hovern*/
+  transform: scale(1.08); /* Verändert die Größe mit der vorher gestzten 25ms transition (übergang) auf 108% */
 }
 
 li img {
-  height: 35px;
+  height: 35px; /* größe des Bildes*/
 }
 
 .active {
-  background-color: #58A943;
-  font-weight: bold;
+  background-color: #58A943; /* Aktive Farbe als Hintergrund der Aktiven Seite */
+  font-weight: bold; /* setzt Font bold, wenn aktiv und vorhanden */
 }
 
+/* Navbar Ende */
+
+
+/* Auswahl des Textes */
+
+/*chromium code*/
 ::selection {
-  color: #58A943;
-  background: #417e3777;
-  /*chrome code*/
+  color: #58A943; /* Farbe des Textmarkierens */
+  background: #417e3777; /* Farbe als Kontrast und Hintergrund vom Markieren */
 }
 
+/* firefox code */
 ::-moz-selection {
   color: #58A943;
   background: #417e3777;
-  /* firefox code */
 }
 
+/* Auswahl des Textes Ende */
 
 .flex-container-large-content {
   flex-direction: row;
@@ -206,7 +211,6 @@ li img {
   background-color: #313131;
   border-radius: 10px;
   margin: 5px;
-
 }
 
 .tooltip {
